@@ -68,11 +68,33 @@
             text-decoration: none;
             border-radius: 8px;
         }
+        .right-align {
+        text-align: right;
+        }
+
+        .left-align {
+        text-align: left;
+        }
+        .flex-container {
+    display: flex;
+    justify-content: space-between; /* מרווח מרבי בין האלמנטים */
+    width: 100%; /* רוחב מלא */
+    direction: rtl; /* שמירה על כיוון כתיבה מימין לשמאל */
+    background: linear-gradient(to bottom, rgba(224, 224, 224, 0.8), rgba(255, 255, 255, 0.8));
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+
         .centered-image {
     display: block;
     margin: auto;
     width: 600px; /* או כל גודל אחר */
 }
+
 
     </style>
 </head>
@@ -81,6 +103,18 @@
         <img src="logo.png" alt="לוגו שער התורה" width="150">
         <h1>ברוכים הבאים לכולל שער התורה</h1>
     </header>
+    <section id="letter">
+        <div class="flex-container">
+            <h2 class="right">לע"נ מאיר בן שמחה ז"ל</h2>
+            <h2 class="left">לע"נ אסתר בת דונה ע"ה</h2>
+        </div>
+        <div class="flex-container">
+            <h2 class="right">לע"נ מוריס משה בן אסתר ז"ל</h2>
+            <h2 class="left">לע"נ שמחה מימי בת אסתר ע"ה</h2>
+        </div>
+        
+    </section>
+
 
     <div class="language-switch">
         <button onclick="changeLanguage('he')">עברית</button>
