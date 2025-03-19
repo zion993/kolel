@@ -33,10 +33,20 @@ function changeLanguage(lang) {
     document.querySelector('#uk h2').innerText = languages[lang].uk;
 }
 
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(function() {
-        alert("המייל הועתק ללוח!");
-    }).catch(function(err) {
-        console.error("שגיאה בהעתקה: ", err);
+function copyToClipboard(event, text) {
+    event.preventDefault(); // מונע מעבר לדף אחר
+    let button = event.target;
+    let originalText = button.innerText; // שמירת הטקסט המקורי
+    
+    navigator.clipboard.writeText(text).then(() => {
+        button.innerText = "מייל הועתק ללוח בהצלחה";
+        button.classList.add("success"); // מוסיף את האפקט הירוק והזוהר
+        
+        setTimeout(() => {
+            button.innerText = originalText; // מחזיר את הטקסט המקורי
+            button.classList.remove("success"); // מסיר את האפקט
+        }, 2000);
+    }).catch(err => {
+        console.error('שגיאה בהעתקה: ', err);
     });
 }

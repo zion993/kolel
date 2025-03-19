@@ -26,9 +26,6 @@ header {
     -2px  2px 0 black, 
     2px  2px 0 black; 
 }
-.language-switch {
-    text-align: left;
-}
 .donation-section {
     margin-top: 30px;
     border: 1px solid #ddd;
@@ -157,4 +154,42 @@ th, td {
 }
 .download-btn:hover {
     background-color: #0056b3;
+}
+
+
+/*העתקת מייל*/
+#copyToClipboard {
+    padding: 10px 15px;
+    /*display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;*/
+}
+
+/* עיצוב במצב שהועתק בהצלחה */
+#copyToClipboard.success {
+    text-decoration: none;
+    color: green;
+    background-color: rgba(0, 128, 0, 0);
+    /*border-color: green;*/
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+    animation: glow 2s ease-in-out forwards;
+}
+
+/* אפקט זוהר */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    75% {
+        text-shadow: 0 0 20px rgba(0, 255, 0, 1);
+        color: currentColor;
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 255, 0, 0);
+        color: #00000000;
+    }
 }
