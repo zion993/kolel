@@ -1,41 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>שער התורה - תרומות</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            text-align: right;
-            margin: 20px;
-        }
-        header {
-            text-align: center;
-        }
-        .language-switch {
-            text-align: left;
-        }
-        .donation-section {
-            margin-top: 30px;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .donation-link {
-            display: block;
-            margin: 10px 0;
-            color: blue;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <img src="logo.png" alt="לוגו שער התורה" width="150">
         <h1>ברוכים הבאים לכולל שער התורה</h1>
     </header>
+    <section >
+        <div class="flex-container">
+            <h2 class="right">לע"נ מאיר בן שמחה ז"ל</h2>
+            <h2 class="left">לע"נ אסתר בת דונה ע"ה</h2>
+        </div>
+        <div class="flex-container">
+            <h2 class="right">לע"נ מוריס משה בן אסתר ז"ל</h2>
+            <h2 class="left">לע"נ שמחה מימי בת אסתר ע"ה</h2>
+        </div>
+        
+    </section>
+
 
     <div class="language-switch">
         <button onclick="changeLanguage('he')">עברית</button>
@@ -43,68 +31,100 @@
         <button onclick="changeLanguage('yi')">יידיש</button>
     </div>
 
+    
+    <section class="donation-section">
+        <h2>Select a country/בחר מדינה לתרומה</h2>
+        <div class="donation-buttons">
+            <a class="donation-link" href="#israel">תרומה בישראל</a>
+            <a class="donation-link" href="#usa">Donate in the USA</a>
+            <a class="donation-link" href="#uk">Donate in the UK</a>
+        </div>
+    </section>
+
     <section id="letter">
         <h2>מכתב מהרבנים</h2>
-        <img src="mihtav_image.png" alt="מכתב מהרבנים" width="600">
+        <img src="mihtav_image.png" alt="מכתב מהרבנים"  class="centered-image">
     </section>
+
 
     <section class="donation-section" id="israel">
         <h2>תרומה בישראל</h2>
-        <a class="donation-link" href="#">לתרומה בכרטיס אשראי</a>
+        <a class="donation-link" href="https://nedar.im/HEgj" target="_blank">לתרומה בכרטיס אשראי</a>
         <p>פרטי חשבון להעברה בנקאית:</p>
-        <p>בנק: שם הבנק | מספר חשבון: XXXXXXX</p>
+        <p>בנק: פועלי אגודת ישראל | מספר חשבון:41750 XXXXXXX</p>
         <p>קוד מוסד לצורך הו"ק בנקאית: 123456</p>
     </section>
 
     <section class="donation-section" id="usa">
         <h2>Donate in the USA</h2>
-        <a class="donation-link" href="#">Donate via Credit Card / תרומה בכרטיס אשראי</a>
+        <a class="donation-link" href="https://nedar.im/YeOK">Donate via Credit Card / תרומה בכרטיס אשראי</a>
+        <a class="donation-link" href="https://secure.ojccardpaymentsite.org/MQAAADAAAAAxAAAAOAAAADkAAAA=">Donate via OJC / תרומה דרך OJC</a>
         <p>Bank transfer details:</p>
-        <p>Bank: Bank Name | Account Number: XXXXXXX</p>
+        <section class="donation-section" id="usa">
+        <h2>Bank transfer details:</h2>
+        <table>
+            <tr>
+                <th>Account Name<br>שם החשבון</th>
+                <td>MERKAZ HATZEDAKA CORP</td>
+            </tr>
+            <tr>
+                <th>Account Number<br>מספר חשבון</th>
+                <td>381068320687</td>
+            </tr>
+            <tr>
+                <th>Routing Number</th>
+                <td>For ACH: 021200339<br>For Wires: 026009593</td>
+            </tr>
+            <tr>
+                <th>SWIFT Code<br>קוד סוויפט</th>
+                <td>For USD: BOFAUS3N<br>בשאר סוגי המטבעות: BOFAUS6S</td>
+            </tr>
+            <tr>
+                <th>Bank Name<br>שם הבנק</th>
+                <td>Bank of America</td>
+            </tr>
+            <tr>
+                <th>Bank Address<br>כתובת הבנק</th>
+                <td>5308 13th Ave. Suite 299 Brooklyn NY 11219</td>
+            </tr>
+            <tr>
+                <th>Zelle Email<br>כתובת אימייל (להעברות Zelle)</th>
+                <td>info@thecharitycenter.org</td>
+            </tr>
+            <tr>
+                <th>Non-Profit Number (Tax-ID)<br>מספר עמותה (מוכר למס)</th>
+                <td>84-4180220</td>
+            </tr>
+            <tr>
+                <th>Contact Email<br>מייל לבירורים</th>
+                <td>office@charityc.org</td>
+            </tr>
+            <tr>
+                <th>Contact Numbers<br>טלפונים ליצירת קשר</th>
+                <td>646-828-9691<br>646-661-2910</td>
+            </tr>
+        </table>
+        <p><strong>בכל תרומה נא לציין מספר קרן 4767</strong></p>
+        <p><strong>For every donation, please specify for Fund 4767.</strong></p>
+    </section>
+        
+        <a href="bank.pdf" download class="download-btn">📄 download</a>
+
     </section>
 
     <section class="donation-section" id="uk">
         <h2>Donate in the UK</h2>
-        <a class="donation-link" href="#">Donate via Credit Card / תרומה בכרטיס אשראי</a>
+        <a class="donation-link" href="https://donate.stripe.com/bIY2a4at3d4I3f215s">Donate via Credit Card / תרומה בכרטיס אשראי</a>
         <p>Bank transfer details:</p>
-        <p>Bank: Bank Name | Account Number: XXXXXXX</p>
+        <p>Open door Society Limited</p>
+        </p>Acc: 51677402 Sort Code:09-01-29</p>
+        </p>Referance: MH Keren 4767</p>
     </section>
 
-    <script>
-        function changeLanguage(lang) {
-            const languages = {
-                he: {
-                    title: 'שער התורה - תרומות',
-                    welcome: 'ברוכים הבאים לכולל שער התורה',
-                    letter: 'מכתב מהרבנים',
-                    israel: 'תרומה בישראל',
-                    usa: 'Donate in the USA',
-                    uk: 'Donate in the UK'
-                },
-                en: {
-                    title: 'Shaar HaTorah - Donations',
-                    welcome: 'Welcome to Shaar HaTorah Kollel',
-                    letter: 'Letter from the Rabbis',
-                    israel: 'Donate in Israel',
-                    usa: 'Donate in the USA',
-                    uk: 'Donate in the UK'
-                },
-                yi: {
-                    title: 'שער התורה - נדבות',
-                    welcome: 'ברוכים הבאים צו שער התורה כולל',
-                    letter: 'בריוו פונעם רבנים',
-                    israel: 'נדבות אין ישראל',
-                    usa: 'נדבות אין אמעריקע',
-                    uk: 'נדבות אין ענגלאנד'
-                }
-            };
-            document.title = languages[lang].title;
-            document.querySelector('h1').innerText = languages[lang].welcome;
-            document.querySelector('#letter h2').innerText = languages[lang].letter;
-            document.querySelector('#israel h2').innerText = languages[lang].israel;
-            document.querySelector('#usa h2').innerText = languages[lang].usa;
-            document.querySelector('#uk h2').innerText = languages[lang].uk;
-        }
-    </script>
+
 </body>
+
+<link rel="stylesheet" href="styles.css">
+<script src="scripts.js"></script>
+
 </html>
