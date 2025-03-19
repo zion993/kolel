@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 20px;
+    background-image: url('background.png'); /* תמונת רקע */
+    background-size: cover; /* כיסוי מלא של הדף */
+    background-position: center; /* תמונה ממורכזת */
+    background-attachment: fixed; /* רקע שלא זז בגלילה */
+    /*background-image: url('background.png'); /* תמונת רקע */
+    /*background-size: cover; /* כיסוי מלא של הדף */
+    /*background-position: center; /* תמונה ממורכזת */
+    /*background-attachment: fixed; /* רקע שלא זז בגלילה */
+}
+header {
+    text-align: center;
+   /* background: linear-gradient(to bottom, rgba(224, 224, 224, 0.5), rgba(255, 255, 255, 0.5));
+    padding: 20px;
+    border-radius: 8px;*/
+    font-size: 38px;
+    font-weight: bold;
+    color: rgb(248, 240, 184); /* צבע הפנים של האות */
+    text-shadow: 
+    -5px -5px 0 black,
+    2px -2px 0 black, 
+    -2px  2px 0 black, 
+    2px  2px 0 black; 
+}
+.language-switch {
+    text-align: left;
+}
+.donation-section {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, rgba(224, 224, 224, 0.8), rgba(255, 255, 255, 0.8));
+
+   /* background: rgba(255, 255, 255, 0.9); /* רקע חצי שקוף עבור קריאות טובה יותר */
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* מוודא שהגבולות יהיו צמודים */
+}
+
+th, td {
+    border: 2px solid black; /* גבולות עבים ושחורים */
+    padding: 10px; /* ריווח פנימי */
+    text-align: center; /* ממרכז את הטקסט */
+}
+.donation-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.donation-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.right-align {
+    text-align: right;
+}
+
+.left-align {
+    text-align: left;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* מרווח מרבי בין האלמנטים */
+    width: 100%; /* רוחב מלא */
+    direction: rtl; /* שמירה על כיוון כתיבה מימין לשמאל */
+    background: linear-gradient(to bottom, rgba(224, 224, 224, 0.8), rgba(255, 255, 255, 0.8));
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+
+.centered-image {
+    display: block;
+    margin: auto;
+    width: 600px; /* או כל גודל אחר */
+}
+@media screen and (max-width: 720px) {
+    body {
+        font-size: 16px; /* טקסט קריא יותר בנייד */
+        padding: 10px; /* שוליים קטנים יותר */
+    }
+
+    .donation-buttons {
+        flex-direction: column; /* כפתורי התרומה יהיו אחד מעל השני */
+        align-items: center;
+    }
+
+    .donation-link {
+        width: 80%; /* הכפתורים יהיו רחבים יותר */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column; /* כותרות יופיעו אחת מתחת לשנייה */
+        text-align: center;
+    }
+
+    img.centered-image {
+        width: 100%; /* התמונה תתאים לרוחב המסך */
+        max-width: 400px; /* לא תהיה גדולה מדי */
+    }
+}
+@media screen and (max-width: 620px) {
+    body {
+        font-size: 13px; /* טקסט קריא יותר בנייד */
+        padding: 10px; /* שוליים קטנים יותר */
+    }
+    header {
+        font-size: 25px;/* הכותרת הראשית קטנה יותר */
+    }
+
+    .donation-buttons {
+        flex-direction: column; /* כפתורי התרומה יהיו אחד מעל השני */
+        align-items: center;
+    }
+
+    .donation-link {
+        width: 80%; /* הכפתורים יהיו רחבים יותר */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column; /* כותרות יופיעו אחת מתחת לשנייה */
+        text-align: center;
+    }
+
+    img.centered-image {
+        width: 100%; /* התמונה תתאים לרוחב המסך */
+        max-width: 400px; /* לא תהיה גדולה מדי */
+    }
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.download-btn:hover {
+    background-color: #0056b3;
+}
