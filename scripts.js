@@ -32,3 +32,11 @@ function changeLanguage(lang) {
     document.querySelector('#usa h2').innerText = languages[lang].usa;
     document.querySelector('#uk h2').innerText = languages[lang].uk;
 }
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        alert("המייל הועתק ללוח!");
+    }).catch(function(err) {
+        console.error("שגיאה בהעתקה: ", err);
+    });
+}
