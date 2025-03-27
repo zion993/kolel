@@ -58,6 +58,9 @@ th, td {
     text-decoration: none;
     border-radius: 8px;
 }
+.donation-link:hover {
+    background-color: #0056b3;
+}
 .right-align {
     text-align: right;
 }
